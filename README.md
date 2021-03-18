@@ -44,7 +44,7 @@ Additionally, here are some essential tips for making your contributions profess
 All version control is done with Git. If you are new, we recommend watching [this](https://www.youtube.com/watch?v=DVRQoVRzMIY) video for a basic introduction. Additionally, [this](https://guides.github.com/introduction/flow/) official github guide serves as a good introduction to the basics of the git workflow.
 
 ## Contributors
-Yoonju Hwang : hwyj3464</br>
+Yoonju Hwang : yoonjuhwang01</br>
 
 ## Acknowledgments
 
