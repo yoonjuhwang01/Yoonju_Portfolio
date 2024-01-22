@@ -1,23 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Yoonju Hwang</title>
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="shortcut icon" type="image/png" href="images/favicon2.png" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-222877183-1"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoonju Hwang</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/favicon2.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-222877183-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-	gtag('config', 'UA-222877183-1');
-	</script>
+        gtag('config', 'UA-222877183-1');
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-database.js"></script>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "yoonju-portfolio.firebaseapp.com",
+            projectId: "yoonju-portfolio",
+            storageBucket: "yoonju-portfolio.appspot.com",
+            messagingSenderId: "263668691344",
+            appId: "1:263668691344:web:f86ccdd0e165f2af31c315",
+            measurementId: "G-4NJCDYSSDP"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 
 </head>
 
@@ -74,22 +103,19 @@
 					<h1>About</h1>
 					<h6>Myself</h6>
 				</div>
-				<p>Hello, my name is Yoonju Hwang.<br>
-					I am seeking a Full-Time or Contract position in the Full Stack Web Developer and Software Engineer
-					where not only I can contribute my advanced knowledge in Computer Science who is responsible,
-					conscientious, attentive has a positive and strong goal-oriented personality.
-					I have a strong passion for what I am working on to become professional.
-					Moreover, I keep learning to improve my technical knowledge and skills to become a professional
-					Web Developer and Software Engineer.
+				<p>
+					Hello, my name is Yoonju Hwang.<br>
+					I am a Data Science Analyst and Software Engineer with a passion for leveraging advanced data analytics and machine learning techniques to extract valuable insights from diverse datasets.
 					<br><br>
 					Technical Skills:
-				<ul class="about-skills">
-					<li><b>Database:</b> MySQL, MongoDB, DBeaver, Django, Gatsby</li>
-					<li><b>Operating Systems:</b> Windows, Linux</li>
-					<li><b>Programming:</b> Java, JavaScript, Python, C#</li>
-					<li><b>Web:</b> HTML5, CSS, Node.js</li>
-					<li><b>Libraries:</b> Scikit-learn, Numpy, React, Maven</li>
-				</ul>
+					<ul class="about-skills">
+						<li><b>Web:</b> HTML5 / CSS, Node.js</li>
+						<li><b>Programming:</b> Python (Scikit-learn, Numpy, Pandas), Pyspark</li>
+						<li><b>Database:</b> MySQL, HDFS, Hadoop, Hive</li>
+						<li><b>Data Visualization:</b> Tableau</li>
+						<li><b>Frameworks:</b> Gatsby, React, Django</li>
+						<li><b>Version Control:</b> GitHub, Bitbucket</li>
+					</ul>
 				</p>
 				<div class="social-media">
 					<ul class="nav-list">
@@ -122,7 +148,7 @@
 					<div class="icon-container">
 						<i class="fas fa-layer-group"></i>
 					</div>
-					<h1>Web Design</h1>
+					<h1>Analyze Data</h1>
 					
 				</div>
 				<div class="skill" data-aos="fade-in" data-aos-delay="600">
@@ -228,48 +254,72 @@
 	</section>
 
 
-
-	<section claa="contact" id="contact">
+	<section class="contact" id="contact">
 		<div class="container">
 			<div class="section-heading">
 				<h1>Contact</h1>
 				<h6>Let's work together</h6>
 			</div>
-
-			<form action="" data-aos="fade-up" data-aos-delay="300">
+	
+			<form id="contactForm" data-aos="fade-up" data-aos-delay="300">
 				<label for="name">Name:</label>
 				<input type="text" id="name" name="name" placeholder="Enter your name..." required>
+	
 				<label for="email">Email:</label>
 				<input type="email" id="email" name="email" placeholder="Enter your E-mail..." required>
+	
 				<label for="service">Services:</label>
 				<select name="services" id="service">
-					<option value="">Web Design </option>
-					<option value="">Web Development</option>
-					<option value="">Web Design/Development</option>
+					<option value="Web Design">Web Design</option>
+					<option value="Web Development">Web Development</option>
+					<option value="Web Design/Development">Web Design/Development</option>
 				</select>
+	
 				<label for="subject">Subject:</label>
 				<textarea name="subject" id="subject" cols="10" rows="10"></textarea>
-				<input type="submit" name="Submit">
+	
+				<input type="submit" value="Submit">
 			</form>
-
+	
+			<script>
+				document.getElementById('contactForm').addEventListener('submit', function (e) {
+					e.preventDefault();
+	
+					const name = document.getElementById('name').value;
+					const email = document.getElementById('email').value;
+					const service = document.getElementById('service').value;
+					const subject = document.getElementById('subject').value;
+	
+					// Push data to Firebase Realtime Database
+					firebase.database().ref('contacts').push({
+						name: name,
+						email: email,
+						service: service,
+						subject: subject,
+						timestamp: firebase.database.ServerValue.TIMESTAMP
+					});
+	
+					// Optionally, reset the form after submission
+					document.getElementById('contactForm').reset();
+				});
+			</script>
 		</div>
 	</section>
+	
 
 	<footer class="copyright">
 		<div class="up" id="up">
 			<i class="fas fa-chevron-up"></i>
 
 		</div>
-		<p>&copy; 2022 Yoonju Hwang</p>
+		<p>&copy; 2024 Yoonju Hwang</p>
 	</footer>
 
 
 
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="main.js"></script>
 
 </html>
